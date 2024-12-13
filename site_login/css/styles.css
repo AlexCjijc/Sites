@@ -1,0 +1,206 @@
+@import url("https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/inter.min.css");
+
+:root {
+  --gray-text:  #6C7278;
+  --blue-gr: #2567E8;
+  --light-blue-gr: #1CE6DA;
+  --link-text: #4D81E7;
+  --input-gray: #EDF1F3;
+  --error-red: red;
+  --white: white;
+  --icon-black: #1A1C1E;
+  --icon-default-eye: #ACB5BB;
+
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(var(--blue-gr), var(--light-blue-gr));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-text);
+  font-weight: 700;
+}
+
+h1 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+p{
+  font-style: Medium;
+  color: var(--gray-text);
+  font-size: 12px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--gray-text);
+  font-size: 12px;
+}
+
+input {
+  width: 267px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: 2px solid var(--input-gray);
+}
+
+.invalid {
+  outline: 2px solid var(--error-red);
+}
+
+input[type='date']::-webkit-calendar-picker-indicator {
+  background-image: url("../image/icon/calendar-due.svg");
+  cursor: pointer;
+  transform: translateX(5px);
+  width: 16px;
+	height: 16px;
+}
+
+.container {
+  padding: 24px;
+  margin: 70px 16px;
+}
+
+.body-form {
+  background-color: var(--white);
+  border-radius: 12px;
+  max-width: 343px;
+  display: block;
+}
+
+.span-icon-back {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-back
+{
+  stroke: var(--icon-black);
+}
+
+.icon-back:hover
+{
+  stroke: var(--link-text);
+}
+
+.text_login {
+  margin-bottom: 24px;
+}
+
+.input-block {
+  margin-bottom: 16px;
+}
+
+.birth-day {
+  margin-bottom: 24px;
+}
+
+.toggle-password {
+  cursor: pointer;
+  background-image: url("../image/icon/eye-off.svg");
+	width: 16px;
+	height: 16px;
+}
+
+.icon-eye {
+  position: absolute;
+  transform: translateX(-28px) translateY(11px);
+}
+
+.icon-defaul {
+  stroke: var(--icon-default-eye);
+}
+
+.icon-active {
+  stroke: var(--light-blue-gr);
+}
+
+.form-button {
+  border-radius: 10px;
+  background:
+      linear-gradient(
+          rgba(255, 255, 255, 0.12),
+          rgba(255, 255, 255, 0)
+      ),
+      #1D61E7;
+  padding: 14px 0px 14px 0px;
+  width: 295px;
+  border: 1px solid #1D61E7;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--white);
+
+}
+
+.form-button:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.error-message {
+  width: 295px;
+  color: var(--error-red);
+  font-size: 12px;
+}
+
+
+@media (min-width: 600px) {
+  input {
+    width: 90%;
+  }
+
+  label {
+    display: inline;
+  }
+
+  .body-form {
+    max-width: 750px;
+    width: 50%;
+    display: block;
+  }
+
+  .span-icon {
+    position: absolute;
+    transform: translateX(-28px) translateY(11px);
+  }
+
+  .form-button {
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  input {
+    width: 95%;
+  }
+
+  .form-button {
+    width: 100%;
+  }
+
+}
